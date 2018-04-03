@@ -1,0 +1,47 @@
+resolution_type: GETDNS_RESOLUTION_STUB
+dns_transport_list:
+  - GETDNS_TRANSPORT_TLS
+
+tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+tls_query_padding_blocksize: 128
+edns_client_subnet_private: 1
+idle_timeout: 10000
+listen_addresses:
+  - 127.0.0.1@8053
+  - 0::1@8053
+
+dnssec_return_status: GETDNS_EXTENSION_TRUE
+round_robin_upstreams: 1
+
+upstream_recursive_servers:
+  - address_data: 1.1.1.1
+    tls_auth_name: "cloudflare-dns.com"
+    tls_pubkey_pinset:
+      - digest: "sha256"  
+        value: yioEpqeR4WtDwE9YxNVnCEkTxIjx6EEIwFSQW+lJsbc=
+#  - address_data: 146.185.167.43
+#    tls_auth_name: "securedns.eu"
+#    tls_pubkey_pinset:
+#      - digest: "sha256"
+#        value: 2EfbwDyk2zSnAbBJSpCSWZKKGUD+a6p/yg2bxdC+x2A=
+#  - address_data: 185.49.141.37
+#    tls_auth_name: "getdnsapi.net"
+#    tls_pubkey_pinset:
+#      - digest: "sha256"
+#        value: foxZRnIh9gZpWnl+zEiKa0EJ2rdCGroMWm02gaxSc9Q=
+#  - address_data: 2620:fe::fe
+#    tls_auth_name: "dns.quad9.net"
+#    tls_pubkey_pinset:
+#      - digest: "sha256"  
+#        value: ZMZ1T16d9Qc5uvRpUn/mu6fh4+IdoJGOEKjANut91Io=
+#  - address_data: 2a04:b900:0:100::38
+#    tls_auth_name: "getdnsapi.net"
+#    tls_pubkey_pinset:
+#      - digest: "sha256"
+#        value: foxZRnIh9gZpWnl+zEiKa0EJ2rdCGroMWm02gaxSc9Q=
+#  - address_data: 9.9.9.9
+#    tls_auth_name: "dns.quad9.net"
+#    tls_pubkey_pinset:
+#      - digest: "sha256"  
+#        value: ZMZ1T16d9Qc5uvRpUn/mu6fh4+IdoJGOEKjANut91Io=
+
