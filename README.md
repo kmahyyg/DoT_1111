@@ -1,11 +1,11 @@
-Link: https://blog.kmahyyg.xyz/2018/DNS-Over-TLS/
-
 ---
 title: DNS-Over-TLS Client Setup
 date: 2018-04-02 11:22:47
 tags:
   - Tech
 ---
+
+Link: https://blog.kmahyyg.xyz/2018/DNS-Over-TLS/
 
 # Preface
 
